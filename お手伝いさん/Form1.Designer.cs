@@ -39,11 +39,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Clock.AutoSize = true;
-            this.Clock.Location = new System.Drawing.Point(86, 78);
+            this.Clock.Location = new System.Drawing.Point(12, 9);
             this.Clock.Name = "Clock";
             this.Clock.Size = new System.Drawing.Size(60, 12);
             this.Clock.TabIndex = 0;
             this.Clock.Text = "DrawClock";
+            this.Clock.Click += new System.EventHandler(this.Clock_Click);
             // 
             // Clock_Timer
             // 
