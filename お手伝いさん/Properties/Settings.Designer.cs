@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace お手伝いさん.Properties
+namespace UsefulCarender.Properties
 {
 
 

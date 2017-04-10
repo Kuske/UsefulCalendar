@@ -1,4 +1,4 @@
-﻿namespace お手伝いさん
+﻿namespace UsefulCarender
 {
     partial class Form1
     {
@@ -28,20 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.Clock = new System.Windows.Forms.Label();
+            this.Clock_Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // Clock
+            // 
+            this.Clock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Clock.AutoSize = true;
+            this.Clock.Location = new System.Drawing.Point(86, 78);
+            this.Clock.Name = "Clock";
+            this.Clock.Size = new System.Drawing.Size(60, 12);
+            this.Clock.TabIndex = 0;
+            this.Clock.Text = "DrawClock";
+            // 
+            // Clock_Timer
+            // 
+            this.Clock_Timer.Interval = 50;
+            this.Clock_Timer.Tick += new System.EventHandler(this.Clock_Timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 350);
+            this.Controls.Add(this.Clock);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label Clock;
+        private System.Windows.Forms.Timer Clock_Timer;
     }
 }
 

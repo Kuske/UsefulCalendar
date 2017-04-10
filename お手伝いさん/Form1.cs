@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clock;
 
-namespace お手伝いさん
+namespace UsefulCarender
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+
+
+            // 時計用のタイマーの起動
+            Clock_Timer.Start();
+        }
+
+        private void Clock_Timer_Tick(object sender, EventArgs e)
+        {
+
+            Clock.Text = TimeData.GetNowTime_string();
         }
     }
 }
