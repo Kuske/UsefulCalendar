@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 
 // 時計関係
-namespace Clock
+namespace Kuske.UsefulCalender.Clock
 {
     // 実際に時間を扱うクラス
     class TimeData
