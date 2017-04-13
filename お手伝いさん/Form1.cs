@@ -45,7 +45,7 @@ namespace Kuske.UsefulCalender.Main
             Graphics FormLines = this.CreateGraphics();
 
             // 線を引く
-            DrawGeometry.Line.DrawLine(FormLines, 1, Color.Aqua, 0, 40, this.Width, 40);
+            DrawGeometry.Line.DrawLine(FormLines, 1, Color.Black, 0, 40, this.Width, 40);
         }
 
         private void DrawClock_Click(object sender, EventArgs e)
