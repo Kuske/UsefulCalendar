@@ -43,7 +43,7 @@ namespace Kuske.UsefulCalender.DrawGeometry
             Pen WritePen = new Pen(DrawColor, Thickness);
 
             //外枠を描画
-            DrawGraphics.DrawRectangle(WritePen, Math.Min(x1, x2), Math.Min(y1, y2), Math.Max(x1, x2), Math.Max(y1, y2));
+            DrawGraphics.DrawRectangle(WritePen, Math.Min(x1, x2), Math.Min(y1, y2), Math.Abs(x1 - x2), Math.Abs(y1 - y2));
 
             // 塗りつぶし処理
             if (FillFlag == true)
@@ -52,7 +52,7 @@ namespace Kuske.UsefulCalender.DrawGeometry
                 SolidBrush DrawBrash = new SolidBrush(DrawColor);
 
                 // 塗りつぶす
-                DrawGraphics.FillRectangle(DrawBrash, Math.Min(x1, x2), Math.Min(y1, y2), Math.Max(x1, x2), Math.Max(y1, y2));
+                DrawGraphics.FillRectangle(DrawBrash, Math.Min(x1, x2), Math.Min(y1, y2), Math.Abs(x1 - x2), Math.Abs(y1 - y2));
 
                 // ブラシの消去
                 DrawBrash.Dispose();
