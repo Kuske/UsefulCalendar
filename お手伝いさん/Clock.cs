@@ -24,6 +24,15 @@ namespace Kuske.UsefulCalender.Clock
 
             return datetime.ToString();
         }
+
+        // (0時0分0秒からの)現在の秒数を取得し、それをint型で返してくれる
+        public static int GetNowTime_int()
+        {
+            // 現在時を取得
+            DateTime datetime = DateTime.Now;
+
+            return datetime.Hour * 3600 + datetime.Minute * 60 + datetime.Second;
+        }
     }
 
     // 時間データをアナログ時計の計算に使うクラス

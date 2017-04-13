@@ -37,7 +37,6 @@
             this.SetPlan_Title = new System.Windows.Forms.TextBox();
             this.PlanSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -111,13 +110,6 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "予定の確認";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(334, 11);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(125, 23);
-            this.progressBar1.TabIndex = 16;
             // 
             // label3
             // 
@@ -203,7 +195,6 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PlanSave);
             this.Controls.Add(this.SetPlan_Title);
@@ -230,7 +221,6 @@
         private System.Windows.Forms.TextBox SetPlan_Title;
         private System.Windows.Forms.Button PlanSave;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

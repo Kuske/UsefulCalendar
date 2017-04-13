@@ -21,7 +21,7 @@ namespace Kuske.UsefulCalender.Main
 
             ////////////////////////////////////////////
 
-            
+
             // 時計用のタイマーの起動
             Clock_Timer.Start();
         }
@@ -42,10 +42,19 @@ namespace Kuske.UsefulCalender.Main
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //オブジェクトの作成
-            Graphics FormLines = this.CreateGraphics();
+            Graphics DrawGraphs = this.CreateGraphics();
 
             // 線を引く
-            DrawGeometry.Line.DrawLine(FormLines, 1, Color.Black, 0, 40, this.Width, 40);
+            DrawGeometry.Line.DrawLine(DrawGraphs, 1, Color.Black, 0, 40, this.Width, 40);
+
+            // 残りの一日の割合のバーを表示
+            {
+                // 外枠
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Black, 334, 11, 459, 34, false);
+
+                // バー
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Blue, 334, 11, 334 + (125 * TimeData.GetNowTime_int()) / (24 * 3600) , 34, true);
+            }
         }
 
         private void DrawClock_Click(object sender, EventArgs e)
