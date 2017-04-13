@@ -75,7 +75,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(135, 11);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(103, 19);
+            this.dateTimePicker1.Size = new System.Drawing.Size(128, 19);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // SetPlan_Absence

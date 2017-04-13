@@ -44,7 +44,7 @@ namespace Kuske.UsefulCalender.Main
             //オブジェクトの作成
             Graphics DrawGraphs = this.CreateGraphics();
 
-            // 線を引く
+            // 上と下の境界線を引く
             DrawGeometry.Line.DrawLine(DrawGraphs, 1, Color.Black, 0, 40, this.Width, 40);
 
             // 残りの一日の割合のバーを表示
