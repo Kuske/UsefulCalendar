@@ -29,6 +29,12 @@ namespace Kuske.UsefulCalender.Clock
     // 時間データをアナログ時計の計算に使うクラス
     class AnalogSet
     {
+        
+    }
+
+    // 大きい時計を描画するクラス
+    class DrawBigClock
+    {
 
     }
 }

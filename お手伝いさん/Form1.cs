@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kuske.UsefulCalender.Clock;
+using Kuske.UsefulCalender.DrawGeometry;
 
-namespace UsefulCarender
+namespace Kuske.UsefulCalender.Main
 {
     public partial class Form1 : Form
     {
@@ -28,11 +29,26 @@ namespace UsefulCarender
         private void Clock_Timer_Tick(object sender, EventArgs e)
         {
 
-            Clock.Text = TimeData.GetNowTime_string();
+            DrawClock.Text = TimeData.GetNowTime_string();
         }
 
         // 常に上に表示しておく時計がクリックされた時の挙動
         private void Clock_Click(object sender, EventArgs e)
+        {
+            // 大きい時計画面を開く処理
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            //オブジェクトの作成
+            Graphics FormLines = this.CreateGraphics();
+
+            // 線を引く
+            DrawGeometry.Line.DrawLine(FormLines, 1, Color.Aqua, 0, 40, this.Width, 40);
+        }
+
+        private void DrawClock_Click(object sender, EventArgs e)
         {
             // 大きい時計画面を開く処理
 

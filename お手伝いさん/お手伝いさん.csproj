@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock.cs" />
+    <Compile Include="EasyDraw.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
