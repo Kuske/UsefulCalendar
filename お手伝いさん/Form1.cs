@@ -12,9 +12,9 @@ using Kuske.UsefulCalender.DrawGeometry;
 
 namespace Kuske.UsefulCalender.Main
 {
-    public partial class Form1 : Form
+    public partial class CheckPlan : Form
     {
-        public Form1()
+        public CheckPlan()
         {
             // 変えてはいけない
             InitializeComponent();
@@ -50,10 +50,10 @@ namespace Kuske.UsefulCalender.Main
             // 残りの一日の割合のバーを表示
             {
                 // 外枠
-                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Black, 86, 40, 248, 56, false);
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Black, 77, 40, 238, 56, false);
 
                 // バー
-                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Blue, 86, 40, 86 + (162 * TimeData.GetNowTime_int()) / (24 * 3600) , 56, true);
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Blue, 77, 40, 77 + (161 * TimeData.GetNowTime_int()) / (24 * 3600) , 56, true);
             }
 
             // 予定リストの表示
@@ -65,6 +65,13 @@ namespace Kuske.UsefulCalender.Main
         private void DrawClock_Click(object sender, EventArgs e)
         {
             // 大きい時計画面を開く処理
+
+        }
+
+        // 予定の確認ボタンが押された時の処理
+        private void Button_CheckPlan_Click(object sender, EventArgs e)
+        {
+            // 予定の確認をするウィンドウを表示
 
         }
     }
