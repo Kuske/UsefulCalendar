@@ -45,15 +45,20 @@ namespace Kuske.UsefulCalender.Main
             Graphics DrawGraphs = this.CreateGraphics();
 
             // 上と下の境界線を引く
-            DrawGeometry.Line.DrawLine(DrawGraphs, 1, Color.Black, 0, 40, this.Width, 40);
-
+            DrawGeometry.Line.DrawLine(DrawGraphs, 1, Color.Black, 0, 60, this.Width, 60);
+            
             // 残りの一日の割合のバーを表示
             {
                 // 外枠
-                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Black, 334, 11, 459, 34, false);
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Black, 86, 40, 248, 56, false);
 
                 // バー
-                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Blue, 334, 11, 334 + (125 * TimeData.GetNowTime_int()) / (24 * 3600) , 34, true);
+                DrawGeometry.Box.DrawBox(DrawGraphs, 1, Color.Blue, 86, 40, 86 + (162 * TimeData.GetNowTime_int()) / (24 * 3600) , 56, true);
+            }
+
+            // 予定リストの表示
+            {
+                // DrawGeometry.Box.DrawBox(DrawGraphs, 2, Color.)
             }
         }
 
